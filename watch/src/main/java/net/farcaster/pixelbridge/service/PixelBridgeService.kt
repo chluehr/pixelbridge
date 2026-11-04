@@ -24,15 +24,18 @@ import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.drop
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 import net.farcaster.pixelbridge.R
 import net.farcaster.pixelbridge.ble.BatteryReader
 import net.farcaster.pixelbridge.ble.BlePeripheralController
+import net.farcaster.pixelbridge.ble.ProbeStateHolder
 import net.farcaster.pixelbridge.data.MusicStore
 import net.farcaster.pixelbridge.data.NotificationActions
 import net.farcaster.pixelbridge.data.NotificationStore
 import net.farcaster.pixelbridge.tile.MusicTileService
 import net.farcaster.pixelbridge.tile.PixelBridgeTileService
+import net.farcaster.pixelbridge.notify.MusicOngoingNotifier
 
 /**
  * connectedDevice-typed foreground service that owns the BLE peripheral stack so the link survives
@@ -43,6 +46,7 @@ import net.farcaster.pixelbridge.tile.PixelBridgeTileService
 class PixelBridgeService : Service() {
 
     private var controller: BlePeripheralController? = null
+    private lateinit var musicNotifier: MusicOngoingNotifier
 
     /** Coarse-signal watcher that pokes the tile to redraw when connection/battery/latest-notif change. */
     private val tileScope = CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate)
@@ -88,7 +92,15 @@ class PixelBridgeService : Service() {
         // Route call action taps (accept / reject / ignore / end) over the BLE back-channel.
         NotificationActions.callHandler = { action -> controller?.sendCall(action) }
         // Route music transport taps (play / pause / next / …) over the BLE back-channel.
-        NotificationActions.musicHandler = { cmd -> controller?.sendMusic(cmd) }
+        NotificationActions.musicHandler = { cmd -> controller?.sendMusic(cmd) ?: false }
+        musicNotifier = MusicOngoingNotifier(applicationContext)
+        tileScope.launch {
+            combine(
+                MusicStore.state,
+                ProbeStateHolder.state.map { it.controlsReady }.distinctUntilChanged(),
+            ) { music, connected -> music to connected }
+                .collect { (music, connected) -> musicNotifier.update(music, connected) }
+        }
         // Debounce a coarse status signature and ask the tiles to redraw when it changes.
         tileScope.launch {
             // Refresh the tiles when their content changes: the notification digest (count + the
@@ -116,6 +128,7 @@ class PixelBridgeService : Service() {
         NotificationActions.callHandler = null
         NotificationActions.musicHandler = null
         tileScope.cancel()
+        musicNotifier.cancel()
         runCatching { unregisterReceiver(bluetoothReceiver) }
         runCatching { unregisterReceiver(batteryReceiver) }
         controller?.stop()

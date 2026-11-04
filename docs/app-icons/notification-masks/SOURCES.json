@@ -1,0 +1,497 @@
+[
+  {
+    "slug": "youtube",
+    "app": "YouTube",
+    "download": "https://raw.githubusercontent.com/simple-icons/simple-icons/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e/icons/youtube.svg",
+    "sha256": "5038808acbbc4e6edda16cbeb1cc6dec80e4e4ee4e227e039c41229fa222aa8c",
+    "upstream": {
+      "title": "YouTube",
+      "hex": "FF0000",
+      "source": "https://www.youtube.com/howyoutubeworks/resources/brand-resources/#logos-icons-and-colors",
+      "guidelines": "https://www.youtube.com/howyoutubeworks/resources/brand-resources/#logos-icons-and-colors"
+    }
+  },
+  {
+    "slug": "telegram",
+    "app": "Telegram",
+    "download": "https://raw.githubusercontent.com/simple-icons/simple-icons/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e/icons/telegram.svg",
+    "sha256": "147fd8f8923e7e5f463fe98c0eb9913bead6b2ae59935728cda141002ec8a7c9",
+    "upstream": {
+      "title": "Telegram",
+      "hex": "26A5E4",
+      "source": "https://telegram.org/tour/screenshots"
+    }
+  },
+  {
+    "slug": "openai",
+    "app": "ChatGPT / OpenAI",
+    "download": "https://raw.githubusercontent.com/simple-icons/simple-icons/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e/icons/openai.svg",
+    "sha256": "2b4a04ddc2395b20d168694d3850ce2050a702c4a0cdeb4d8b31b9a970481a8c",
+    "upstream": {
+      "title": "OpenAI",
+      "hex": "412991",
+      "source": "https://openai.com/brand",
+      "guidelines": "https://openai.com/brand"
+    }
+  },
+  {
+    "slug": "reddit",
+    "app": "Reddit",
+    "download": "https://raw.githubusercontent.com/simple-icons/simple-icons/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e/icons/reddit.svg",
+    "sha256": "00e5008d56567543cf956561e61d5bf9bf629f520c7488a4d9a00164c29dd8ba",
+    "upstream": {
+      "title": "Reddit",
+      "hex": "FF4500",
+      "source": "https://www.redditinc.com/brand",
+      "guidelines": "https://www.redditinc.com/brand"
+    }
+  },
+  {
+    "slug": "spotify",
+    "app": "Spotify",
+    "download": "https://raw.githubusercontent.com/simple-icons/simple-icons/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e/icons/spotify.svg",
+    "sha256": "b9ec9bec7769c35643981586d6ea0d675aaf3871b32f8a291bcac7a87fff0bc1",
+    "upstream": {
+      "title": "Spotify",
+      "hex": "1ED760",
+      "source": "https://developer.spotify.com/documentation/general/design-and-branding/#using-our-logo",
+      "guidelines": "https://developer.spotify.com/documentation/general/design-and-branding/#using-our-logo"
+    }
+  },
+  {
+    "slug": "whatsapp",
+    "app": "WhatsApp",
+    "download": "https://raw.githubusercontent.com/simple-icons/simple-icons/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e/icons/whatsapp.svg",
+    "sha256": "8fb209a53a61618c3483594b3e070481a35575d6aaecbe00a6fe386670c8fb1c",
+    "upstream": {
+      "title": "WhatsApp",
+      "hex": "25D366",
+      "source": "https://about.meta.com/brand/resources/whatsapp/whatsapp-brand",
+      "guidelines": "https://about.meta.com/brand/resources/whatsapp/whatsapp-brand"
+    }
+  },
+  {
+    "slug": "signal",
+    "app": "Signal",
+    "download": "https://raw.githubusercontent.com/simple-icons/simple-icons/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e/icons/signal.svg",
+    "sha256": "391f46b8feaef281a44dfdf40035d9a4546ded17d2c3eb88d6614762779f1930",
+    "upstream": {
+      "title": "Signal",
+      "hex": "3B45FD",
+      "source": "https://signal.org/brand",
+      "guidelines": "https://signal.org/brand"
+    }
+  },
+  {
+    "slug": "discord",
+    "app": "Discord",
+    "download": "https://raw.githubusercontent.com/simple-icons/simple-icons/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e/icons/discord.svg",
+    "sha256": "1d364b72c9eaf1fe37d17ca88cd8fb541308dc0f3b09e2ab3b824f380b3493d5",
+    "upstream": {
+      "title": "Discord",
+      "hex": "5865F2",
+      "source": "https://discord.com/branding",
+      "guidelines": "https://discord.com/branding"
+    }
+  },
+  {
+    "slug": "instagram",
+    "app": "Instagram",
+    "download": "https://raw.githubusercontent.com/simple-icons/simple-icons/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e/icons/instagram.svg",
+    "sha256": "f53af2d1fc5292ba1433b5c1faf50005ce6a997fa302d1816989929f379a59dc",
+    "upstream": {
+      "title": "Instagram",
+      "hex": "FF0069",
+      "source": "https://about.meta.com/brand/resources/instagram",
+      "guidelines": "https://about.meta.com/brand/resources/instagram"
+    }
+  },
+  {
+    "slug": "facebook",
+    "app": "Facebook",
+    "download": "https://raw.githubusercontent.com/simple-icons/simple-icons/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e/icons/facebook.svg",
+    "sha256": "b06d18d844ed621b89faffb1a33440cc0ec4f1ffea9f36191f50db19a47c59a6",
+    "upstream": {
+      "title": "Facebook",
+      "hex": "0866FF",
+      "source": "https://about.meta.com/brand/resources/facebook/logo",
+      "guidelines": "https://about.meta.com/brand/resources/facebook/logo"
+    }
+  },
+  {
+    "slug": "messenger",
+    "app": "Messenger",
+    "download": "https://raw.githubusercontent.com/simple-icons/simple-icons/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e/icons/messenger.svg",
+    "sha256": "a52aadd9f7602aebfe4d01e2b249963e136fc996edfa2b78b037ad7e1a400e71",
+    "upstream": {
+      "title": "Messenger",
+      "hex": "0866FF",
+      "source": "https://about.meta.com/brand/resources/facebook/messenger-icon",
+      "guidelines": "https://about.meta.com/brand/resources/facebook/messenger-icon"
+    }
+  },
+  {
+    "slug": "tiktok",
+    "app": "TikTok",
+    "download": "https://raw.githubusercontent.com/simple-icons/simple-icons/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e/icons/tiktok.svg",
+    "sha256": "6f54ac8d325faacea8935bdc44cbed60206a6b408641799e5fea1cba7c1a0af7",
+    "upstream": {
+      "title": "TikTok",
+      "hex": "000000",
+      "source": "https://tiktok.com"
+    }
+  },
+  {
+    "slug": "x",
+    "app": "X",
+    "download": "https://raw.githubusercontent.com/simple-icons/simple-icons/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e/icons/x.svg",
+    "sha256": "be03adbfce4a46c4e42eae5ee7b5e676b59627fa25e15a317e453bb18153ff5f",
+    "upstream": {
+      "title": "X",
+      "hex": "000000",
+      "source": "https://x.com",
+      "guidelines": "https://about.x.com/en/who-we-are/brand-toolkit",
+      "aliases": {
+        "aka": [
+          "Twitter"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "viber",
+    "app": "Viber",
+    "download": "https://raw.githubusercontent.com/simple-icons/simple-icons/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e/icons/viber.svg",
+    "sha256": "2cc123deda743aeb31e3a9cba6bdd73bee79475704dfba9cf0c7b46023095914",
+    "upstream": {
+      "title": "Viber",
+      "hex": "7360F2",
+      "source": "https://www.viber.com/brand-center",
+      "guidelines": "https://www.viber.com/brand-center"
+    }
+  },
+  {
+    "slug": "vk",
+    "app": "VK",
+    "download": "https://raw.githubusercontent.com/simple-icons/simple-icons/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e/icons/vk.svg",
+    "sha256": "2d8fae863c9fdf5937f49326708dcf6cff0f5617ee67b502776b426bbe2cace8",
+    "upstream": {
+      "title": "VK",
+      "hex": "0077FF",
+      "source": "https://vk.com/brand",
+      "guidelines": "https://vk.com/brand"
+    }
+  },
+  {
+    "slug": "gmail",
+    "app": "Gmail",
+    "download": "https://raw.githubusercontent.com/simple-icons/simple-icons/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e/icons/gmail.svg",
+    "sha256": "a537f5d85d9a27efa3a5d6086e8df6072ee93f76b4d176639a5e483f74b74b9f",
+    "upstream": {
+      "title": "Gmail",
+      "hex": "EA4335",
+      "source": "https://fonts.gstatic.com/s/i/productlogos/gmail_2020q4/v8/192px.svg"
+    }
+  },
+  {
+    "slug": "googlemessages",
+    "app": "Google Messages",
+    "download": "https://raw.githubusercontent.com/simple-icons/simple-icons/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e/icons/googlemessages.svg",
+    "sha256": "6491fd8977ad26f1a9fc906741bfa2e83241cfb4165b549e5a2f8d74d5196f41",
+    "upstream": {
+      "title": "Google Messages",
+      "hex": "1A73E8",
+      "source": "https://messages.google.com"
+    }
+  },
+  {
+    "slug": "googlecalendar",
+    "app": "Google Calendar",
+    "download": "https://raw.githubusercontent.com/simple-icons/simple-icons/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e/icons/googlecalendar.svg",
+    "sha256": "39b434d3264d123629a12509e9f5bdf57bf9e5ed9a6eafffb714cff5f05f032f",
+    "upstream": {
+      "title": "Google Calendar",
+      "hex": "4285F4",
+      "source": "https://fonts.gstatic.com/s/i/productlogos/calendar_2020q4/v8/192px.svg"
+    }
+  },
+  {
+    "slug": "googlemaps",
+    "app": "Google Maps",
+    "download": "https://raw.githubusercontent.com/simple-icons/simple-icons/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e/icons/googlemaps.svg",
+    "sha256": "26bfa6c871fba0bbd47d931e408b3e704abdcc1693353cc8f9d1846c2faaa732",
+    "upstream": {
+      "title": "Google Maps",
+      "hex": "4285F4",
+      "source": "https://commons.wikimedia.org/wiki/File:Google_Maps_icon.svg"
+    }
+  },
+  {
+    "slug": "googlechrome",
+    "app": "Google Chrome",
+    "download": "https://raw.githubusercontent.com/simple-icons/simple-icons/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e/icons/googlechrome.svg",
+    "sha256": "ce2ff9d2a010ed24f821ef34e40dc125d2bdf1dd28f42ded7b6017585b73c1dd",
+    "upstream": {
+      "title": "Google Chrome",
+      "hex": "4285F4",
+      "source": "https://www.google.com/chrome",
+      "guidelines": "https://partnermarketinghub.withgoogle.com/brands/chrome"
+    }
+  },
+  {
+    "slug": "googledrive",
+    "app": "Google Drive",
+    "download": "https://raw.githubusercontent.com/simple-icons/simple-icons/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e/icons/googledrive.svg",
+    "sha256": "7e678aba9e463140ec8603f0e6cc78bb80f6caf9cd3ee73335026a90729a1a40",
+    "upstream": {
+      "title": "Google Drive",
+      "hex": "4285F4",
+      "source": "https://developers.google.com/drive/web/branding"
+    }
+  },
+  {
+    "slug": "slack",
+    "app": "Slack",
+    "download": "https://raw.githubusercontent.com/simple-icons/simple-icons/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e/icons/slack.svg",
+    "sha256": "f23c317b279f53dcd2260a6cd2e279f7a696f87dcb3da259d6201f05bbc45b0d",
+    "upstream": {
+      "title": "Slack",
+      "hex": "4A154B",
+      "source": "https://slack.com/brand-guidelines",
+      "guidelines": "https://slack.com/brand-guidelines"
+    }
+  },
+  {
+    "slug": "zoom",
+    "app": "Zoom",
+    "download": "https://raw.githubusercontent.com/simple-icons/simple-icons/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e/icons/zoom.svg",
+    "sha256": "da5b2f13d38ca61c88a227f58e3bebcbcbb55412d97678ecff49ae7c603f9a7b",
+    "upstream": {
+      "title": "Zoom",
+      "hex": "0B5CFF",
+      "source": "https://brand.zoom.us/media-library/",
+      "guidelines": "https://brand.zoom.us/usage-legal/"
+    }
+  },
+  {
+    "slug": "protonmail",
+    "app": "Proton Mail",
+    "download": "https://raw.githubusercontent.com/simple-icons/simple-icons/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e/icons/protonmail.svg",
+    "sha256": "7fa6d416e63c3d538e77ad0f89c82250c3373ccbae96eb96278e5ff26bdf4994",
+    "upstream": {
+      "title": "Proton Mail",
+      "hex": "6D4AFF",
+      "source": "https://proton.me/media/kit"
+    }
+  },
+  {
+    "slug": "thunderbird",
+    "app": "Thunderbird",
+    "download": "https://raw.githubusercontent.com/simple-icons/simple-icons/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e/icons/thunderbird.svg",
+    "sha256": "cfead1f62aaac0638f21053ed2ab78e938ef32a96b8a82c453a2afe2e1f6f1b2",
+    "upstream": {
+      "title": "Thunderbird",
+      "hex": "0A84FF",
+      "source": "https://design.thunderbird.net/resources/logo"
+    }
+  },
+  {
+    "slug": "twitch",
+    "app": "Twitch",
+    "download": "https://raw.githubusercontent.com/simple-icons/simple-icons/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e/icons/twitch.svg",
+    "sha256": "dbe27bc02a01b8d89b6259cacef328c9fa70bb13c29f38c36eb1421863f6f0b6",
+    "upstream": {
+      "title": "Twitch",
+      "hex": "9146FF",
+      "source": "https://brand.twitch.tv",
+      "guidelines": "https://brand.twitch.tv"
+    }
+  },
+  {
+    "slug": "netflix",
+    "app": "Netflix",
+    "download": "https://raw.githubusercontent.com/simple-icons/simple-icons/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e/icons/netflix.svg",
+    "sha256": "953016177fafc83dc8a51868a584600b39dfeff652a07be028a61283915df547",
+    "upstream": {
+      "title": "Netflix",
+      "hex": "E50914",
+      "source": "https://brand.netflix.com/en/assets/brand-symbol",
+      "guidelines": "https://brand.netflix.com/en/assets/brand-symbol"
+    }
+  },
+  {
+    "slug": "github",
+    "app": "GitHub",
+    "download": "https://raw.githubusercontent.com/simple-icons/simple-icons/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e/icons/github.svg",
+    "sha256": "3bf8cceead820aec50d4ee825a3fd02c5a1cd6665cc9cf4cbf3d9c8861a204bb",
+    "upstream": {
+      "title": "GitHub",
+      "hex": "181717",
+      "source": "https://github.com/logos",
+      "guidelines": "https://github.com/logos"
+    }
+  },
+  {
+    "slug": "element",
+    "app": "Element",
+    "download": "https://raw.githubusercontent.com/simple-icons/simple-icons/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e/icons/element.svg",
+    "sha256": "d46a6195c43ce1dbb17d340d1fce59625eea59363f08dd0bb89644efef694cc9",
+    "upstream": {
+      "title": "Element",
+      "hex": "0DBD8B",
+      "source": "https://element.io"
+    }
+  },
+  {
+    "slug": "mastodon",
+    "app": "Mastodon",
+    "download": "https://raw.githubusercontent.com/simple-icons/simple-icons/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e/icons/mastodon.svg",
+    "sha256": "b27197d1e47e19f31a80bf5d08b3dc9a8d073083436215f672e8e1016178cbe4",
+    "upstream": {
+      "title": "Mastodon",
+      "hex": "6364FF",
+      "source": "https://github.com/mastodon/mastodon/blob/7ccf7a73f1c47a8c03712c39f7c591e837cf6d08/app/javascript/images/logo-symbol-icon.svg",
+      "guidelines": "https://joinmastodon.org/branding"
+    }
+  },
+  {
+    "slug": "steam",
+    "app": "Steam",
+    "download": "https://raw.githubusercontent.com/simple-icons/simple-icons/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e/icons/steam.svg",
+    "sha256": "5eef8f31106b81956ed908490bcf8c73abe476aa58bb9041acdf70b0d42ebcae",
+    "upstream": {
+      "title": "Steam",
+      "hex": "000000",
+      "source": "https://partner.steamgames.com/doc/marketing/branding",
+      "guidelines": "https://partner.steamgames.com/doc/marketing/branding"
+    }
+  },
+  {
+    "slug": "mailru",
+    "app": "Mail.Ru",
+    "download": "https://raw.githubusercontent.com/simple-icons/simple-icons/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e/icons/maildotru.svg",
+    "sha256": "6aec2ce0e28784e8778e5da2dc222152d8b1858a477e6ff417ac1249494ec1f3",
+    "upstream": {
+      "title": "Mail.Ru",
+      "hex": "005FF9",
+      "source": "https://my.mail.ru"
+    }
+  },
+  {
+    "slug": "kinopoisk",
+    "app": "Kinopoisk",
+    "download": "https://raw.githubusercontent.com/simple-icons/simple-icons/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e/icons/kinopoisk.svg",
+    "sha256": "c17362c835f79f2cbf7402e26de22bec71e555dc9df8a77844b0c9dff226b3de",
+    "upstream": {
+      "title": "Kinopoisk",
+      "hex": "FF5500",
+      "source": "https://www.kinopoisk.ru/special/branding",
+      "guidelines": "https://www.kinopoisk.ru/special/branding",
+      "aliases": {
+        "loc": {
+          "ru-RU": "КиноПоиск"
+        }
+      }
+    }
+  },
+  {
+    "slug": "vlc",
+    "app": "VLC media player",
+    "download": "https://raw.githubusercontent.com/simple-icons/simple-icons/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e/icons/vlcmediaplayer.svg",
+    "sha256": "dcefad2f6a4e3a35aa667ca25803904311d8f5229c837d11612e012af358b2af",
+    "upstream": {
+      "title": "VLC media player",
+      "hex": "FF8800",
+      "source": "https://code.videolan.org/videolan/vlc/-/blob/1ce7f686ee17a028d2d79627ae69f22d905f2e23/extras/package/macosx/asset_sources/vlc_app_icon.svg"
+    }
+  },
+  {
+    "slug": "youtubemusic",
+    "app": "YouTube Music",
+    "download": "https://raw.githubusercontent.com/simple-icons/simple-icons/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e/icons/youtubemusic.svg",
+    "sha256": "f96c8a67f93717df8f9f57b0e96638b19e8fd80a165ddf83598592b5342612f5",
+    "upstream": {
+      "title": "YouTube Music",
+      "hex": "FF0000",
+      "source": "https://partnermarketinghub.withgoogle.com/#/brands"
+    }
+  },
+  {
+    "slug": "applemusic",
+    "app": "Apple Music",
+    "download": "https://raw.githubusercontent.com/simple-icons/simple-icons/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e/icons/applemusic.svg",
+    "sha256": "365264bcf032a1acb6f18554cf7d34b1b2a75f7e571848629173bbfd0e1cadbb",
+    "upstream": {
+      "title": "Apple Music",
+      "hex": "FA243C",
+      "source": "https://www.apple.com/itunes/marketing-on-music/identity-guidelines.html#apple-music-icon"
+    }
+  },
+  {
+    "slug": "amazonmusic",
+    "app": "Amazon Music",
+    "download": "https://raw.githubusercontent.com/simple-icons/simple-icons/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e/icons/amazonmusic.svg",
+    "sha256": "9388a83ef567e467153e50b59bef0ff86489b4e9a4a14231052b06e4f67a2236",
+    "upstream": {
+      "title": "Amazon Music",
+      "hex": "46C3D0",
+      "source": "https://music.amazon.com",
+      "guidelines": "https://artists.amazonmusic.com/brand-guidelines"
+    }
+  },
+  {
+    "slug": "tidal",
+    "app": "TIDAL",
+    "download": "https://raw.githubusercontent.com/simple-icons/simple-icons/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e/icons/tidal.svg",
+    "sha256": "99f2c0efba4e756b58da03fa35b5d163f1033e77671f1bf2931df29f8694e4af",
+    "upstream": {
+      "title": "TIDAL",
+      "hex": "000000",
+      "source": "https://tidal.com/press"
+    }
+  },
+  {
+    "slug": "soundcloud",
+    "app": "SoundCloud",
+    "download": "https://raw.githubusercontent.com/simple-icons/simple-icons/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e/icons/soundcloud.svg",
+    "sha256": "02bac3d2cb8c1091aeae61219803dadbb4364dd636e50f60567d25dfcde7c12c",
+    "upstream": {
+      "title": "SoundCloud",
+      "hex": "FF5500",
+      "source": "https://press.soundcloud.com"
+    }
+  },
+  {
+    "slug": "pocketcasts",
+    "app": "Pocket Casts",
+    "download": "https://raw.githubusercontent.com/simple-icons/simple-icons/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e/icons/pocketcasts.svg",
+    "sha256": "d4bc33f5847310da10758889adad064dd00ed9bd3fd3aeb6fcc7c7e1a3fdbfdc",
+    "upstream": {
+      "title": "Pocket Casts",
+      "hex": "F43E37",
+      "source": "https://blog.pocketcasts.com/press/"
+    }
+  },
+  {
+    "slug": "antennapod",
+    "app": "AntennaPod",
+    "download": "https://raw.githubusercontent.com/simple-icons/simple-icons/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e/icons/antennapod.svg",
+    "sha256": "c9154f7b44734cc47b09008e52c1d20bc17901692787eb294ae6f61ea8115e4d",
+    "upstream": {
+      "title": "AntennaPod",
+      "hex": "364FF3",
+      "source": "https://github.com/AntennaPod/Branding/blob/115dc180bb562eab4e5edc55eccfbdc11cd56873/Logo/logo-icon-white-out.svg"
+    }
+  },
+  {
+    "slug": "foobar2000",
+    "app": "foobar2000",
+    "download": "https://raw.githubusercontent.com/simple-icons/simple-icons/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e/icons/foobar2000.svg",
+    "sha256": "a0b534ae456396acf45d51f6fb66d13563ea88f74a91ab13169ced7d48859c06",
+    "upstream": {
+      "title": "foobar2000",
+      "hex": "000000",
+      "source": "https://hydrogenaud.io/index.php?topic=55604.0"
+    }
+  }
+]

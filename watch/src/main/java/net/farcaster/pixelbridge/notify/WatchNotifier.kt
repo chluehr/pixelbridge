@@ -8,8 +8,9 @@ import android.app.NotificationManager
 import android.content.Context
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
+import androidx.core.content.ContextCompat
 import androidx.core.content.getSystemService
-import net.farcaster.pixelbridge.R
+import androidx.core.graphics.drawable.toBitmap
 import net.farcaster.pixelbridge.data.WatchNotification
 
 /**
@@ -29,8 +30,9 @@ class WatchNotifier(private val context: Context) {
     @SuppressLint("MissingPermission")
     fun show(n: WatchNotification) {
         val title = n.title ?: n.app ?: "Notification"
+        val icon = AppIcons.forSource(n.app)
         val builder = NotificationCompat.Builder(context, CHANNEL_ID)
-            .setSmallIcon(R.drawable.ic_launcher_foreground)
+            .setSmallIcon(icon)
             .setContentTitle(title)
             .setContentText(n.body)
             .setSubText(n.app)
@@ -38,6 +40,10 @@ class WatchNotifier(private val context: Context) {
             .setPriority(NotificationCompat.PRIORITY_HIGH)
             .setVibrate(VIBRATION_PATTERN) // pre-O; the channel drives vibration on O+
             .setAutoCancel(true)
+        // Preserve the store icon's colors on the card; Android masks the small icon separately.
+        ContextCompat.getDrawable(context, AppIcons.colorForSource(n.app))?.let {
+            builder.setLargeIcon(it.toBitmap(width = 96, height = 96))
+        }
         n.body?.let { builder.setStyle(NotificationCompat.BigTextStyle().bigText(it)) }
         runCatching {
             NotificationManagerCompat.from(context).notify(idOf(n.id), builder.build())

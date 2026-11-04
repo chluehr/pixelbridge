@@ -53,6 +53,12 @@
         </activity>
 
         <activity
+            android:name=".ui.MusicActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:taskAffinity="" />
+
+        <activity
             android:name=".ui.FindAlertActivity"
             android:exported="false"
             android:launchMode="singleTop"

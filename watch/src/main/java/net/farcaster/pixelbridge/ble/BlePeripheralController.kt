@@ -11,6 +11,7 @@ import android.util.Log
 import net.farcaster.pixelbridge.BuildConfig
 import net.farcaster.pixelbridge.data.NotificationActions
 import net.farcaster.pixelbridge.data.NotificationStore
+import net.farcaster.pixelbridge.data.MusicStore
 import net.farcaster.pixelbridge.notify.NotificationRouter
 import net.farcaster.pixelbridge.notify.WatchNotifier
 import net.farcaster.pixelbridge.protocol.GbMessage
@@ -87,6 +88,8 @@ class BlePeripheralController(private val context: Context) {
         advertiser = null
         gattServer = null
         running = false
+        MusicStore.clear()
+        ProbeStateHolder.update { it.copy(centralConnected = false, notifySubscribed = false, advertising = false, gattServerOpen = false) }
     }
 
     /**
@@ -111,11 +114,9 @@ class BlePeripheralController(private val context: Context) {
         return sent
     }
 
-    // NOTE: these watch->phone sends do NOT gate on isNotifyEnabled. That flag goes stale across
-    // Gadgetbridge reconnects (it holds the link but our tracked subscription resets), which
-    // silently swallowed Answer/Decline/music taps. sendLine() already no-ops when no central is
-    // connected, and the stack harmlessly drops a notify if the central isn't subscribed — exactly
-    // how the dismiss/reply path (sendAction) has always worked reliably.
+    // User commands are not gated on the advisory CCCD flag: Samsung may restore a working link
+    // without replaying that callback. The queue checks real submission/completion results and
+    // recovers from errors/timeouts instead of waiting forever for a nonexistent callback.
 
     /** Watch -> phone: ask Gadgetbridge to ring the phone (findPhone). */
     fun sendFindPhone(active: Boolean): Boolean {
@@ -201,8 +202,13 @@ class BlePeripheralController(private val context: Context) {
     private fun sendVer(): Boolean =
         gattServer?.sendLine(GbProtocol.encodeVer(BuildConfig.VERSION_NAME, Build.MODEL ?: Build.PRODUCT)) ?: false
 
-    private fun sendStatus(bat: Int, volt: Double, chg: Int): Boolean =
-        gattServer?.sendLine(GbProtocol.encodeStatus(bat, volt, chg)) ?: false
+    private fun sendStatus(bat: Int, volt: Double, chg: Int): Boolean {
+        // Unsolicited battery updates must not prime the TX queue before the phone is ready.
+        // onSubscribed pushes a fresh snapshot; successful explicit TX also restores this flag.
+        val server = gattServer ?: return false
+        if (!server.isNotifyEnabled) return false
+        return server.sendLine(GbProtocol.encodeStatus(bat, volt, chg))
+    }
 
     /** Reads the sticky battery intent and pushes it as a `status` line. */
     private fun pushBatteryStatus(): Boolean {
@@ -217,6 +223,7 @@ class BlePeripheralController(private val context: Context) {
     private fun publishServerState() {
         val server = gattServer ?: return
         val device = server.connectedDevice
+        if (device == null) MusicStore.clear()
         ProbeStateHolder.update {
             it.copy(
                 centralConnected = device != null,

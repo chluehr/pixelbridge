@@ -12,6 +12,7 @@ import androidx.wear.protolayout.LayoutElementBuilders.LayoutElement
 import androidx.wear.protolayout.ModifiersBuilders
 import androidx.wear.protolayout.ResourceBuilders
 import androidx.wear.protolayout.TimelineBuilders
+import androidx.wear.protolayout.StateBuilders
 import androidx.wear.protolayout.material3.buttonGroup
 import androidx.wear.protolayout.material3.materialScope
 import androidx.wear.protolayout.material3.primaryLayout
@@ -61,6 +62,8 @@ class MusicTileService : TileService() {
 
         val tile = TileBuilders.Tile.Builder()
             .setResourcesVersion(RESOURCES_VERSION)
+            // Consume LoadAction once; automatic refresh must not replay the previous tap.
+            .setState(StateBuilders.State.Builder().build())
             .setTileTimeline(TimelineBuilders.Timeline.fromLayoutElement(layout))
             .build()
 

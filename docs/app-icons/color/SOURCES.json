@@ -1,0 +1,814 @@
+[
+  {
+    "slug": "youtube",
+    "app": "YouTube",
+    "package": "com.google.android.youtube",
+    "page": "https://play.google.com/store/apps/details?id=com.google.android.youtube",
+    "download": "https://play-lh.googleusercontent.com/QNmuZQc9I6Zbe3mWnSr0hycnENqGFCI5p3yE29Hkxtf22T0IWS6zTrpxULLyyjWpB7ONAXDsDQXnXcVWokl3eg=w512-h512",
+    "original": "youtube.png",
+    "sha256": "03f1055962f607406ba7349c270b1a685a9f56f90d1c060467a02121edf6fca2",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "youtube.png"
+  },
+  {
+    "slug": "telegram",
+    "app": "Telegram",
+    "package": "org.telegram.messenger",
+    "page": "https://play.google.com/store/apps/details?id=org.telegram.messenger",
+    "download": "https://play-lh.googleusercontent.com/PyZ3akMGXPV0tKKirKNwfO--PSQW3FHR6rD_H9mAaukZ8LiHyYFuBLeU8UZ2ok6r5SP79-3prkfybWKh98AZAD0=w512-h512",
+    "original": "telegram.png",
+    "sha256": "85d76dab39f3114a7bc6dde74026eb03f75c2a5a7b4b128c3ce03dab609c8a0b",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "telegram.png"
+  },
+  {
+    "slug": "openai",
+    "app": "ChatGPT",
+    "package": "com.openai.chatgpt",
+    "page": "https://play.google.com/store/apps/details?id=com.openai.chatgpt",
+    "download": "https://play-lh.googleusercontent.com/T9J8e9oxxPd600j_KPM4KK2GHfNpUpGBdTy8lHPXBXpOUfGusRuZXj0UMgFNrP8we6LVt9V-AibEgcLootE6VK4=w512-h512",
+    "original": "openai.png",
+    "sha256": "4e2fd1df4ed6e215262bdfff54c272c83176ba8bf58e0392b2123d6acb762d14",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "openai.png"
+  },
+  {
+    "slug": "reddit",
+    "app": "Reddit",
+    "package": "com.reddit.frontpage",
+    "page": "https://play.google.com/store/apps/details?id=com.reddit.frontpage",
+    "download": "https://play-lh.googleusercontent.com/8FVS0kvM60JwqZWRNzBIlwrZZxJa8vpli8IWaaTo8QXRe1PHmCNJ8UpWoXkGPV3jKEaTY2OVAeYoisOnGJXY=w512-h512",
+    "original": "reddit.png",
+    "sha256": "be305f3f034fcd29b2e698034cadfde28995bc780cdc8cc21a29f0f2b27e517f",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "reddit.png"
+  },
+  {
+    "slug": "spotify",
+    "app": "Spotify",
+    "package": "com.spotify.music",
+    "page": "https://play.google.com/store/apps/details?id=com.spotify.music",
+    "download": "https://play-lh.googleusercontent.com/IzQgYCcnCFCD08GR-3bdtcT8xzOvrNkC84avGT5CwTX2VIqmTmKKJcP_Cd4JoBOdmCMlTndlOzV6hrthg2fOWA=w512-h512",
+    "original": "spotify.jpg",
+    "sha256": "07d50e3c8417774c57f097f1e5cf44c9c1d0b45b2b711122a18b266155d172ae",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "spotify.png"
+  },
+  {
+    "slug": "whatsapp",
+    "app": "WhatsApp",
+    "package": "com.whatsapp",
+    "page": "https://play.google.com/store/apps/details?id=com.whatsapp",
+    "download": "https://play-lh.googleusercontent.com/Gqxk4T0uZsDwFp07DE-508hkyvcNmgFuRwPiwTEfF7D7OzGv1FdHDzEyMxNsSBZLOJlGpe3ULvVM2RgrRAlBqA=w512-h512",
+    "original": "whatsapp.png",
+    "sha256": "b29a53a5ca9e2e6516a21210d43e7489cba6dad0cfba2df98e976affafd2e391",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "whatsapp.png"
+  },
+  {
+    "slug": "signal",
+    "app": "Signal",
+    "package": "org.thoughtcrime.securesms",
+    "page": "https://play.google.com/store/apps/details?id=org.thoughtcrime.securesms",
+    "download": "https://play-lh.googleusercontent.com/HXEs85Okatm4_lZMmCaLFk3iXQ6_lrr00i8nsxaqBRSy6VGnsP7F50dKUfrO37Sj0nxtzSjMpKbjgWh6d0PTyEA=w512-h512",
+    "original": "signal.png",
+    "sha256": "fff6cc41d953a492b1535fb8f10e2e954251bc15cb5243e5462d8f8cbedf4ab3",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "signal.png"
+  },
+  {
+    "slug": "discord",
+    "app": "Discord",
+    "package": "com.discord",
+    "page": "https://play.google.com/store/apps/details?id=com.discord",
+    "download": "https://play-lh.googleusercontent.com/w2DdjDHGSj3DQElQQM0_J3PsNsALS-WD3CBeH0aXOYceR-F3aT02gFonhoFzz-Tc9ec8Dx9cLqh48-tzIFcP=w512-h512",
+    "original": "discord.png",
+    "sha256": "3479d5acd73010b563c93a30a9153a3af5f35edba107d71e9aed3c98e024f5d6",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "discord.png"
+  },
+  {
+    "slug": "instagram",
+    "app": "Instagram",
+    "package": "com.instagram.android",
+    "page": "https://play.google.com/store/apps/details?id=com.instagram.android",
+    "download": "https://play-lh.googleusercontent.com/yHi59jmO_lVamcyJ1i3rM1_E8bAiAspShnGjjURq05ipQQSUksO3QVEsXTegRSqul038-4YNA7O644XAcx251Q=w512-h512",
+    "original": "instagram.png",
+    "sha256": "9061a0ab3d22c72ff59756bb7b49da075692256ccb6fba5263b09c54b75b10f0",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "instagram.png"
+  },
+  {
+    "slug": "facebook",
+    "app": "Facebook",
+    "package": "com.facebook.katana",
+    "page": "https://play.google.com/store/apps/details?id=com.facebook.katana",
+    "download": "https://play-lh.googleusercontent.com/12KEJDhgk6oyE1VgmfCuFzFrQripZ_endElbvEhU1rZawQgV3RI-v3II8fDslI1sdC_WKBkmtxS3jxuIihk33Q=w512-h512",
+    "original": "facebook.png",
+    "sha256": "732a151d7754325188bcd70b56475b6c88deccf2fd40c5d4982f00081539ad0c",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "facebook.png"
+  },
+  {
+    "slug": "messenger",
+    "app": "Messenger",
+    "package": "com.facebook.orca",
+    "page": "https://play.google.com/store/apps/details?id=com.facebook.orca",
+    "download": "https://play-lh.googleusercontent.com/cuRpiGqvAMkcbAOibD-AKCBagAunUkspQUWC_jVZF2Hob_ODdmkefnZeqkofW1idFQHhgZgnLIjsqT-2v7JKBw=w512-h512",
+    "original": "messenger.png",
+    "sha256": "3b58886d740573f78b0e2c5b9445b970b7fda8844faf738e88ce2d7d6da1913e",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "messenger.png"
+  },
+  {
+    "slug": "tiktok",
+    "app": "TikTok",
+    "package": "com.zhiliaoapp.musically",
+    "page": "https://play.google.com/store/apps/details?id=com.zhiliaoapp.musically",
+    "download": "https://play-lh.googleusercontent.com/2o7iuqPe-0msP3DvNhzoOgNo4eZ6GkL_RtGVeKyBn5UBQAW5cw-GW5V3wDOHB1yTQuqWzrFLFOv2u4_5ea1uhg=w512-h512",
+    "original": "tiktok.png",
+    "sha256": "f1460d10ef1929d8494b8e049aa045ab8b913f193a39fcf6a25e1c5afdfb0d5d",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "tiktok.png"
+  },
+  {
+    "slug": "x",
+    "app": "X",
+    "package": "com.twitter.android",
+    "page": "https://play.google.com/store/apps/details?id=com.twitter.android",
+    "download": "https://play-lh.googleusercontent.com/IsLsCD4eLC2CYvlkgTI6Z5TROj0BJIBgUF7BZ5eliTzyyTjqG_mbofeG4kw2s7oG_JZMSi5ErLz_qsDi169C8w=w512-h512",
+    "original": "x.jpg",
+    "sha256": "6acb6d70faed238b0594ad81240870a7854847537e4c740beb8cd2bc28f3b2ee",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "x.png"
+  },
+  {
+    "slug": "viber",
+    "app": "Viber",
+    "package": "com.viber.voip",
+    "page": "https://play.google.com/store/apps/details?id=com.viber.voip",
+    "download": "https://play-lh.googleusercontent.com/iGHZEkEJBBcOyMEETvYrwCXk-eYQ_TaEgBHPKVptKSon4QQHqhD3Zs-tdeINPZucc1sokQ5FJ4ig-YOGh1Lm=w512-h512",
+    "original": "viber.jpg",
+    "sha256": "cb1f230c7b066fd668f21d2941451a48f29bee06ff9f96b5f3698062dc6ce9a9",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "viber.png"
+  },
+  {
+    "slug": "vk",
+    "app": "VK",
+    "package": "com.vkontakte.android",
+    "page": "https://www.rustore.ru/catalog/app/com.vkontakte.android",
+    "download": "https://static.rustore.ru/3f3d7180-6eb9-45ad-8706-f467c6dcf82a",
+    "original": "vk.png",
+    "sha256": "cdce3e61d1dafcf78dfe063f438652f4e19d682bee4616fb9374f54f683e90a7",
+    "size": [
+      368,
+      368
+    ],
+    "round_preview": "vk.png"
+  },
+  {
+    "slug": "gmail",
+    "app": "Gmail",
+    "package": "com.google.android.gm",
+    "page": "https://play.google.com/store/apps/details?id=com.google.android.gm",
+    "download": "https://play-lh.googleusercontent.com/c6KD_8-GvnGRJA4lRQ4y5YnUa3-LOeYAS7ubw1jWyB9bmr6Kj6zzRvh2A5WBB-Vd3e6zhElmhDv07fCJx2Fc=w512-h512",
+    "original": "gmail.png",
+    "sha256": "dc763cd3d878c4bd276bd093985827f34bb1be6474f4057582f43661efc018eb",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "gmail.png"
+  },
+  {
+    "slug": "googlemessages",
+    "app": "Google Messages",
+    "package": "com.google.android.apps.messaging",
+    "page": "https://play.google.com/store/apps/details?id=com.google.android.apps.messaging",
+    "download": "https://play-lh.googleusercontent.com/Mgukz1fq2stUYX_lQf79gmMeDzNvRCu5eobmiJwNkXl4riNY6HZ3VB-HRW5QciwEuLnFyk_ZmHumvn8RJ5Um=w512-h512",
+    "original": "googlemessages.png",
+    "sha256": "272f73b6579d439b104856490997764e50251867ae68c8bca0dd014aaf6481d9",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "googlemessages.png"
+  },
+  {
+    "slug": "googlecalendar",
+    "app": "Google Calendar",
+    "package": "com.google.android.calendar",
+    "page": "https://play.google.com/store/apps/details?id=com.google.android.calendar",
+    "download": "https://play-lh.googleusercontent.com/vEoqLbT_QkYcEaawWBRc22N6i98OUtOUpM1LmKdVs_xx7lCsUyFfV0ZiqoUXjMijUteiBhhN4K5MpoF96FRNOg=w512-h512",
+    "original": "googlecalendar.png",
+    "sha256": "db1895078d1e251444236fc89df446c2d13621ec50178ac5f5362e6717ab6169",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "googlecalendar.png"
+  },
+  {
+    "slug": "googlemaps",
+    "app": "Google Maps",
+    "package": "com.google.android.apps.maps",
+    "page": "https://play.google.com/store/apps/details?id=com.google.android.apps.maps",
+    "download": "https://play-lh.googleusercontent.com/B8pdO_2K5nBsF0g1h6dKwV_jQFLP-XombGDEQGtJT-mw1EUKCKJpa9lBGCF4rP_MwCsozSXyvI3z19g9R3J4=w512-h512",
+    "original": "googlemaps.jpg",
+    "sha256": "c1a084bdb6c414f634554fc2f9a4c15b9f84a98d40771042d6b89c449e1418ee",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "googlemaps.png"
+  },
+  {
+    "slug": "googlechrome",
+    "app": "Google Chrome",
+    "package": "com.android.chrome",
+    "page": "https://play.google.com/store/apps/details?id=com.android.chrome",
+    "download": "https://play-lh.googleusercontent.com/gbkzfC3R1fXcGR4Uag1uRSN_123Tpo_KxhVZFLFCatmthFuO1bzPczUomFtxI42YYEQMJeAaZuIFVrTF58gZYg=w512-h512",
+    "original": "googlechrome.png",
+    "sha256": "023908028c891dfc070f5142a11e777f5f515d76da5e3a72c8354f29688d5073",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "googlechrome.png"
+  },
+  {
+    "slug": "googledrive",
+    "app": "Google Drive",
+    "package": "com.google.android.apps.docs",
+    "page": "https://play.google.com/store/apps/details?id=com.google.android.apps.docs",
+    "download": "https://play-lh.googleusercontent.com/chc-Fx3Qi3BisTZw1aOteYK_XkMHUiXKRbX2Hc8shyFI8pYt7DcyUPzVwLGJKIeKCKDD6nFVhEtUrIaEyzcnmA=w512-h512",
+    "original": "googledrive.png",
+    "sha256": "b268c129fd9ed9d78515b679fa03b020b14a670ce0da67ee0c165d7ba0c22aad",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "googledrive.png"
+  },
+  {
+    "slug": "slack",
+    "app": "Slack",
+    "package": "com.Slack",
+    "page": "https://play.google.com/store/apps/details?id=com.Slack",
+    "download": "https://play-lh.googleusercontent.com/C9w-zv2PzpS-Rr9L8PUveRfv36lfYiB2kPKiEy45ucveIYMCoUW1nKQls5VxXSJyUsNxC_s7nFqpIAbqlLbSKA=w512-h512",
+    "original": "slack.png",
+    "sha256": "1f4326c20819c5856f1e5146ac91a7ffc17717e3eb01b0729d9b142bf4fdde4e",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "slack.png"
+  },
+  {
+    "slug": "zoom",
+    "app": "Zoom",
+    "package": "us.zoom.videomeetings",
+    "page": "https://play.google.com/store/apps/details?id=us.zoom.videomeetings",
+    "download": "https://play-lh.googleusercontent.com/-Ajlo-aDBHtpCez_yILc8Kepv_kNhbTJPw1WyvXgkh4O-hvUN-YD_v_0FlJmgRbZ2vn1OmZCmCBOY23h4kJYEA=w512-h512",
+    "original": "zoom.png",
+    "sha256": "c9f8b6a5413fb77835a744ad16f02e01894a355ddb6ec9b1eab28ea6e39b0c97",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "zoom.png"
+  },
+  {
+    "slug": "protonmail",
+    "app": "Proton Mail",
+    "package": "ch.protonmail.android",
+    "page": "https://play.google.com/store/apps/details?id=ch.protonmail.android",
+    "download": "https://play-lh.googleusercontent.com/TrxNlz9xizn4GBiVB2gWyws0majvL7tuCS1OsoaZxK1Sbi-uWFd51vo7eO9ghIDR6jQkIRF47mHoudd73KHazmI=w512-h512",
+    "original": "protonmail.png",
+    "sha256": "f07662c5f4cfc6962401ffa5b800272f77ac853777db0c91e8243738480681f3",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "protonmail.png"
+  },
+  {
+    "slug": "thunderbird",
+    "app": "Thunderbird",
+    "package": "net.thunderbird.android",
+    "page": "https://play.google.com/store/apps/details?id=net.thunderbird.android",
+    "download": "https://play-lh.googleusercontent.com/VuR8zmfgo8Ivw-8A4mHrWyCiqcy9CVXCjkWb6dPdtCpsHDkKJpp_4UYbWd5S5A7vpCI2gBIhB9fCTDwNsBhQ8iY=w512-h512",
+    "original": "thunderbird.png",
+    "sha256": "aea976a17e08be33eac3b4ecaea11f4b39f6fe3a2efdbf01bff96e1781149753",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "thunderbird.png"
+  },
+  {
+    "slug": "twitch",
+    "app": "Twitch",
+    "package": "tv.twitch.android.app",
+    "page": "https://play.google.com/store/apps/details?id=tv.twitch.android.app",
+    "download": "https://play-lh.googleusercontent.com/JHCM4AIyomRp6Lo2-5ugoznlGdsZmNnejVN8DLvtWFHShcz8YRgUE170f1CyOfrleYbtFL2g8tQ3VqlQNAgqoA=w512-h512",
+    "original": "twitch.png",
+    "sha256": "65866da3ee243e6da641ee9d835ddd2542cd3f2046a8759badf1692305575790",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "twitch.png"
+  },
+  {
+    "slug": "netflix",
+    "app": "Netflix",
+    "package": "com.netflix.mediaclient",
+    "page": "https://play.google.com/store/apps/details?id=com.netflix.mediaclient",
+    "download": "https://play-lh.googleusercontent.com/fXVS45nukV1x9PYVSKHkCQK0QGCOishIvAOxIZS3sgRem8HS7l9l94_Ggj-WZPrTLePRdNYN4pp4SPAQL7oS0PU=w512-h512",
+    "original": "netflix.png",
+    "sha256": "e07a41e8afc91b3ff66ddd02e6b8378e786034721acfa948e43de85449c7971b",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "netflix.png"
+  },
+  {
+    "slug": "github",
+    "app": "GitHub",
+    "package": "com.github.android",
+    "page": "https://play.google.com/store/apps/details?id=com.github.android",
+    "download": "https://play-lh.googleusercontent.com/nxpwi4UD84GNJuJ42S9U0f3lGDsHu8VkIDPCccFmJL6kyNVb1O3pTY1rl1YZICLBk6EcWIaX6n9prCbdUoQEOw=w512-h512",
+    "original": "github.png",
+    "sha256": "ecbb1b139457bdf6d43616186953513fbea6c451d178ab0f070983cd10885887",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "github.png"
+  },
+  {
+    "slug": "element",
+    "app": "Element X",
+    "package": "io.element.android.x",
+    "page": "https://play.google.com/store/apps/details?id=io.element.android.x",
+    "download": "https://play-lh.googleusercontent.com/MZ7BiAyOEzVTMsPSOJEOsCn_ZVH_QqLQX7d9tje-FsMnz3M-fSi-uKZe4xirA_cVQ9tJJl9JGjbpEzD7du5zpbk=w512-h512",
+    "original": "element.png",
+    "sha256": "d1035562e1a2998397b3c11cf536e199431584376b9f4fb9bff98d9ac8736adf",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "element.png"
+  },
+  {
+    "slug": "mastodon",
+    "app": "Mastodon",
+    "package": "org.joinmastodon.android",
+    "page": "https://play.google.com/store/apps/details?id=org.joinmastodon.android",
+    "download": "https://play-lh.googleusercontent.com/A0wOjGETOFCD_UNoihkOAtEwuxkhlVdhucJuAau8RPody6FTAsVd-aZqDBxa2cSjERDXf1fc3gang8CT77RO_Q=w512-h512",
+    "original": "mastodon.png",
+    "sha256": "0c257d9d5d40446c0355aa7a011447d282572f54f69c9e4918238d83d3222897",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "mastodon.png"
+  },
+  {
+    "slug": "aimp",
+    "app": "AIMP",
+    "package": "com.aimp.player",
+    "page": "https://play.google.com/store/apps/details?id=com.aimp.player",
+    "download": "https://play-lh.googleusercontent.com/LVt50yjK0NxmcRaG0TuVk5vFy3fDV050wLZnndaIMSa1UdXqUEE8mt5tuMvpIKvOjJuaJi5GrvpxsYWbN0sqd48=w512-h512",
+    "original": "aimp.png",
+    "sha256": "af9a094367daca1ef69bd93c1de0a958abd0e7ad5467b50d3acab7dc65e35a43",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "aimp.png"
+  },
+  {
+    "slug": "poweramp",
+    "app": "Poweramp",
+    "package": "com.maxmpz.audioplayer",
+    "page": "https://play.google.com/store/apps/details?id=com.maxmpz.audioplayer",
+    "download": "https://play-lh.googleusercontent.com/-21ASw97RWIu-CnDVbEEtTrfVIDqpfhY4eofgk5aT98q4E8jnrMVxNqI0J7JYgRTkHjoOoWM58ScUzu30cxevQ=w512-h512",
+    "original": "poweramp.jpg",
+    "sha256": "6982e6fda564886e4c391dc5d77623c2162c8ed3d6a43ef25e4eae611eb73b8f",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "poweramp.png"
+  },
+  {
+    "slug": "vlc",
+    "app": "VLC",
+    "package": "org.videolan.vlc",
+    "page": "https://play.google.com/store/apps/details?id=org.videolan.vlc",
+    "download": "https://play-lh.googleusercontent.com/BG5YwziGHjh0wvWg6VO9c3iprYa3vFww1CnNqPvFszUVxcY4yB29dy7t2jsLwwI4jAqX08_--12FmMxgNG1JFg=w512-h512",
+    "original": "vlc.png",
+    "sha256": "db647dcc67405214c7a049c6a124bfa24e81597a696cefe829bf19168f348bcc",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "vlc.png"
+  },
+  {
+    "slug": "musicolet",
+    "app": "Musicolet",
+    "package": "in.krosbits.musicolet",
+    "page": "https://play.google.com/store/apps/details?id=in.krosbits.musicolet",
+    "download": "https://play-lh.googleusercontent.com/xnxkipjI-3Ar4ahr0RagrvtKSDkXOl_vYORFVcWSc_zSN8xCjhOX_vBaN2Fz_WDfLoO_oA8AvEJt9LfnPxoI=w512-h512",
+    "original": "musicolet.png",
+    "sha256": "e198dd20a402986f48287f9ae21fa1b3cac2b99890282f82ac77b9a108c5ba98",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "musicolet.png"
+  },
+  {
+    "slug": "youtubemusic",
+    "app": "YouTube Music",
+    "package": "com.google.android.apps.youtube.music",
+    "page": "https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.music",
+    "download": "https://play-lh.googleusercontent.com/MyptZXmcCyF59phIWPsNCfHq6zSO_ojEdw_4rMYYWPOGdikSjqeOXcoszBZ053VYpINe5K7ZR9KV1nkFWgxdOw=w512-h512",
+    "original": "youtubemusic.png",
+    "sha256": "a594fd74753960f13d07467a1a8eb5242d34166149b14a32321cd830f76d154c",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "youtubemusic.png"
+  },
+  {
+    "slug": "yandexmusic",
+    "app": "Yandex Music",
+    "package": "ru.yandex.music",
+    "page": "https://play.google.com/store/apps/details?id=ru.yandex.music",
+    "download": "https://play-lh.googleusercontent.com/Jk0Nrh3alWIZSCbkPqRJaDm5ewxiwfOuQdD1hcGs_bNm1Zi4t1LQrUiUSIHY8y6g-AzrRwdQC6ZBFMb7dZxuUCE=w512-h512",
+    "original": "yandexmusic.png",
+    "sha256": "e9f97381910fef0de2aeb1c407146bb854147da2db3d2cd35c71728320f16e9f",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "yandexmusic.png"
+  },
+  {
+    "slug": "applemusic",
+    "app": "Apple Music",
+    "package": "com.apple.android.music",
+    "page": "https://play.google.com/store/apps/details?id=com.apple.android.music",
+    "download": "https://play-lh.googleusercontent.com/KvngbEdIpmKyn-6C1pKfZBBs_3mwS1lUfvZf6LxOg2p4ZLqAdKy9WTGSUIUR5DT4LdMkdwvqzng2rxNpLa5c=w512-h512",
+    "original": "applemusic.png",
+    "sha256": "5a4c4e968727e7cac4ebd67db71c5326e751fdc334de32166a1f7fc32942c830",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "applemusic.png"
+  },
+  {
+    "slug": "amazonmusic",
+    "app": "Amazon Music",
+    "package": "com.amazon.mp3",
+    "page": "https://play.google.com/store/apps/details?id=com.amazon.mp3",
+    "download": "https://play-lh.googleusercontent.com/9v2z1-7g8pWbxek8IW3Q9gGsAqD-YkTvy_rmyd4Cfb-OkpVR2T6jt-Ev2eKDcvx72njhCQ_4fEd9qg8-T9AaDA=w512-h512",
+    "original": "amazonmusic.png",
+    "sha256": "a58043d5116ae2118b227eb51728eed5bf807c2bd4ffc82e0c28dbc3a81aca94",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "amazonmusic.png"
+  },
+  {
+    "slug": "deezer",
+    "app": "Deezer",
+    "package": "deezer.android.app",
+    "page": "https://play.google.com/store/apps/details?id=deezer.android.app",
+    "download": "https://play-lh.googleusercontent.com/RFBXn4V0H8Zmi3_jViu73GTpQOmGmrvG7mdM1ynStAAYEd2aOLo5G0v9AHSUMwia1lQGI-c5oXMzZJCq0RMlJA=w512-h512",
+    "original": "deezer.png",
+    "sha256": "8b98d7f3ceacfaebd0085a05bd3c1f22ef8f44d55a7e1de01d68708288716900",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "deezer.png"
+  },
+  {
+    "slug": "tidal",
+    "app": "TIDAL",
+    "package": "com.aspiro.tidal",
+    "page": "https://play.google.com/store/apps/details?id=com.aspiro.tidal",
+    "download": "https://play-lh.googleusercontent.com/_ktGwooWwh0h_MCi0T2YmFQB-pj6o5AGFDvdI302bdnNWtcQniOHy3pf4WRVs6rzjMtdl01J7-Qfw88xtYrWn6w=w512-h512",
+    "original": "tidal.jpg",
+    "sha256": "c5e56c3e80421cb912e95f867c255c305e4b9143b949f6dc797b9679c3d988fa",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "tidal.png"
+  },
+  {
+    "slug": "soundcloud",
+    "app": "SoundCloud",
+    "package": "com.soundcloud.android",
+    "page": "https://play.google.com/store/apps/details?id=com.soundcloud.android",
+    "download": "https://play-lh.googleusercontent.com/rfmCNUApzYntPTdAVmor5vpaOGxIUJWNlpED2pwKcDuCTUaf_2vJlOALNzX1PiejSgZIuAT8k0F5xIBU58JG3g=w512-h512",
+    "original": "soundcloud.png",
+    "sha256": "9f719d7a6467dfcdc508520a0fe51b95e1cc683ca0521c95ab59cdb36e389d8e",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "soundcloud.png"
+  },
+  {
+    "slug": "pocketcasts",
+    "app": "Pocket Casts",
+    "package": "au.com.shiftyjelly.pocketcasts",
+    "page": "https://play.google.com/store/apps/details?id=au.com.shiftyjelly.pocketcasts",
+    "download": "https://play-lh.googleusercontent.com/9VEAFZhJZgBzOnGXhSLqxwGt_11eQ4KBczz5UpaRGWK95z1isxCv4Xpp1T4gtCAtK6OlSBILVcbM9XaWaTK05hQ=w512-h512",
+    "original": "pocketcasts.png",
+    "sha256": "6e411711c744bae6eeffbdd3627ed45d57ae467a3c8ab70dc74eee7cb42d4662",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "pocketcasts.png"
+  },
+  {
+    "slug": "antennapod",
+    "app": "AntennaPod",
+    "package": "de.danoeh.antennapod",
+    "page": "https://play.google.com/store/apps/details?id=de.danoeh.antennapod",
+    "download": "https://play-lh.googleusercontent.com/3ifnx8300WmGrzDFtmQj8uY6Wz7O6BRWyiFo0YNMjY6OI371dd7rdMPLR3onZxGbaFM0xcagSWBTEtNO39Zm=w512-h512",
+    "original": "antennapod.png",
+    "sha256": "e3f772834bf6182c4a1f20efb1c93aba0239bbc2260471a95cb0bc2ab62f1337",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "antennapod.png"
+  },
+  {
+    "slug": "foobar2000",
+    "app": "foobar2000",
+    "package": "com.foobar2000.foobar2000",
+    "page": "https://play.google.com/store/apps/details?id=com.foobar2000.foobar2000",
+    "download": "https://play-lh.googleusercontent.com/4RBKUrBzIwVedaS19O7DoCruJWg57q0UkwPL5wKPcx7gV2p5M_-noPCsUkeqGTMXmCV4SMHZIS_WmhwZKblL2n0=w512-h512",
+    "original": "foobar2000.png",
+    "sha256": "baff097d5ad1346b2c00263a5313ed9afdfd30fa8d1310637616f8a7554559b0",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "foobar2000.png"
+  },
+  {
+    "slug": "samsungmusic",
+    "app": "Samsung Music",
+    "package": "com.sec.android.app.music",
+    "page": "https://play.google.com/store/apps/details?id=com.sec.android.app.music",
+    "download": "https://play-lh.googleusercontent.com/33jGVvQPsr295-WDt49usX2iF7tsdRkoXs9YRC-Jtmku1LQfWxcUOOe-Q1uwptNEFYpBEGFF0CuEqLqzSjeZLA=w512-h512",
+    "original": "samsungmusic.png",
+    "sha256": "21c41c7ddb3c35856ef5349359f01740a51efd6db62e981f69d4cfd3dcfe1d05",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "samsungmusic.png"
+  },
+  {
+    "slug": "kdeconnect",
+    "app": "KDE Connect",
+    "package": "org.kde.kdeconnect_tp",
+    "page": "https://play.google.com/store/apps/details?id=org.kde.kdeconnect_tp",
+    "download": "https://play-lh.googleusercontent.com/dfdXLwqFGh8Goy40zpImEhmydPryr3PYvYdadLUX5ZXy8Ri-tKHZuDCbJ6Lsa83ekKtIJFVislDA6qtqAIC0=w512-h512",
+    "original": "kdeconnect.png",
+    "sha256": "acc59e62b9d4c0adaa96664e8eda59afa981ff34752d65a9a178166f41bad98a",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "kdeconnect.png"
+  },
+  {
+    "slug": "gosuslugi",
+    "app": "Госуслуги",
+    "package": "ru.rostel",
+    "page": "https://www.rustore.ru/catalog/app/ru.rostel",
+    "download": "https://static.rustore.ru/2026/2/19/d7/apk/537791/content/ICON/b2916730-6a34-4ebe-aedf-df926e807741.png",
+    "original": "gosuslugi.png",
+    "sha256": "343b279c2460f37ff087ce9e0588e34c5bd08b13eec21c1852a24a6a54a29cac",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "gosuslugi.png"
+  },
+  {
+    "slug": "steam",
+    "app": "Steam",
+    "package": "com.valvesoftware.android.steam.community",
+    "page": "https://www.rustore.ru/catalog/app/com.valvesoftware.android.steam.community",
+    "download": "https://static.rustore.ru/apk/2063553595/content/ICON/b235edac-85f3-46eb-a63d-d9b3335164ab.png",
+    "original": "steam.png",
+    "sha256": "9f4157d654cc08a7906e299c4949dbd20cbafd3d2248cc9b07d0096502be7638",
+    "size": [
+      280,
+      280
+    ],
+    "round_preview": "steam.png"
+  },
+  {
+    "slug": "steamchat",
+    "app": "Steam Chat",
+    "package": "com.valvesoftware.android.steam.friendsui",
+    "page": "https://www.rustore.ru/catalog/app/com.valvesoftware.android.steam.friendsui",
+    "download": "https://static.rustore.ru/2025/11/7/04/apk/2063574474/content/ICON/2a3919f5-3734-4fef-9a33-a7a84ebd2c0a.png",
+    "original": "steamchat.png",
+    "sha256": "393327334c513f1ad30ef24d64f17ea142f5e79ad430f0d3c35e9fb4ebce7f7d",
+    "size": [
+      480,
+      480
+    ],
+    "round_preview": "steamchat.png"
+  },
+  {
+    "slug": "ozon",
+    "app": "Ozon",
+    "package": "ru.ozon.app.android",
+    "page": "https://www.rustore.ru/catalog/app/ru.ozon.app.android",
+    "download": "https://static.rustore.ru/2026/6/30/b6/apk/514239/content/ICON/8a44b15d-a16e-41a4-b926-9088693015ca.png",
+    "original": "ozon.png",
+    "sha256": "92f3c8dbd69fdd5b65d59eb88b372682954f770e83be7682d24918af840d7d5d",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "ozon.png"
+  },
+  {
+    "slug": "wildberries",
+    "app": "Wildberries",
+    "package": "com.wildberries.ru",
+    "page": "https://www.rustore.ru/catalog/app/com.wildberries.ru",
+    "download": "https://static.rustore.ru/2026/2/11/07/apk/234943/content/ICON/b7e12348-1345-45fb-9755-2cf7a866f16f.png",
+    "original": "wildberries.png",
+    "sha256": "af539b9766561e11f93fcd81a22b1bd88f2a41863fbbf2d499cf927a8ff34194",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "wildberries.png"
+  },
+  {
+    "slug": "avito",
+    "app": "Авито",
+    "package": "com.avito.android",
+    "page": "https://www.rustore.ru/catalog/app/com.avito.android",
+    "download": "https://static.rustore.ru/2026/1/27/d8/apk/2688703/content/ICON/ea0c42d8-934f-41a6-a3da-89798736f888.png",
+    "original": "avito.png",
+    "sha256": "425da5938e69727f5340fbd553a834942f8eb2e1edd4dfc01f2083f74fecbc0e",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "avito.png"
+  },
+  {
+    "slug": "yandexgo",
+    "app": "Яндекс Go",
+    "package": "ru.yandex.taxi",
+    "page": "https://www.rustore.ru/catalog/app/ru.yandex.taxi",
+    "download": "https://static.rustore.ru/apk/4207807/content/ICON/8d2cb859-a102-4e4b-9bc7-b4955ac0f14c.png",
+    "original": "yandexgo.png",
+    "sha256": "e88c36a1c36fde0d650afa0b64d7c33e192544aed0ee5f1155ed405d36e1b4bb",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "yandexgo.png"
+  },
+  {
+    "slug": "yandexmail",
+    "app": "Яндекс Почта",
+    "package": "ru.yandex.mail",
+    "page": "https://www.rustore.ru/catalog/app/ru.yandex.mail",
+    "download": "https://static.rustore.ru/2025/12/9/83/apk/319999679/content/ICON/6b55bc25-3152-485f-b58b-4496b7db6e89.png",
+    "original": "yandexmail.png",
+    "sha256": "63a640fd0699856b31b3f4db663b3910f37d52f78bc962e3941072715ce7fd09",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "yandexmail.png"
+  },
+  {
+    "slug": "mailru",
+    "app": "Почта Mail",
+    "package": "ru.mail.mailapp",
+    "page": "https://www.rustore.ru/catalog/app/ru.mail.mailapp",
+    "download": "https://static.rustore.ru/2026/3/11/7c/apk/332223/content/ICON/2ea61211-2ee2-469b-a08e-acc8a9f3b4c6.png",
+    "original": "mailru.png",
+    "sha256": "1cf277e5106b649de4b2d6ebc2e4f6dc65aecdd7aa7c67ca8e2999424ee0dabd",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "mailru.png"
+  },
+  {
+    "slug": "2gis",
+    "app": "2ГИС",
+    "package": "ru.dublgis.dgismobile",
+    "page": "https://www.rustore.ru/catalog/app/ru.dublgis.dgismobile",
+    "download": "https://static.rustore.ru/2026/2/2/1e/apk/260799/content/ICON/8e439c58-11cf-4e0a-a3dc-9596eda08cfd.png",
+    "original": "2gis.png",
+    "sha256": "72c7e7bb9270386ff77e09992ab7bf11e7266e0716745f9c0d070bdddc89fcfe",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "2gis.png"
+  },
+  {
+    "slug": "kinopoisk",
+    "app": "Кинопоиск",
+    "package": "ru.kinopoisk",
+    "page": "https://www.rustore.ru/catalog/app/ru.kinopoisk",
+    "download": "https://static.rustore.ru/2026/7/24/d4/apk/91614143/content/ICON/62ce23b0-ba78-4112-9a3d-20ced6b7806c.png",
+    "original": "kinopoisk.png",
+    "sha256": "3f29546bd1b262f96a372c813a518ee15e5fdf4d75683fc721a5df00acfc8309",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "kinopoisk.png"
+  },
+  {
+    "slug": "rutube",
+    "app": "RUTUBE",
+    "package": "ru.rutube.app",
+    "page": "https://www.rustore.ru/catalog/app/ru.rutube.app",
+    "download": "https://static.rustore.ru/2026/8/27/7f/apk/246207/content/ICON/aa57aed4-f944-41ca-a2db-0c373d9cc720.png",
+    "original": "rutube.png",
+    "sha256": "657845d43674a80839f1e56ef781a338724c0eaa7c88993911571dce3da812be",
+    "size": [
+      512,
+      512
+    ],
+    "round_preview": "rutube.png"
+  }
+]

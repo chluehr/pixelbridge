@@ -39,6 +39,12 @@ won't both fit in one 31-byte advertisement).
   on, otherwise **chunks at 20 bytes**.
 - **Never assume a notification fits one packet.** On the watch, buffer + split on `\n`. On outbound,
   emit each JSON object followed by `\n` and let the stack/chunking carry it.
+- Defer unsolicited battery reports until CCCD subscription or successful TX confirms readiness.
+  Explicit user commands require a connected central, but are not gated on the advisory subscription
+  flag: Samsung can restore a working subscription without replaying its CCCD write to the app.
+  Check immediate submission results and completion status, and reconnect on errors or a five-second
+  completion timeout. Discard the old queue on disconnect/subscription so partial JSON commands
+  cannot be replayed on a new connection.
 - Use **NOTIFY** (unacknowledged) for the notification firehose; use write-with-response / indicate
   only where delivery must not drop.
 
@@ -56,7 +62,8 @@ won't both fit in one 31-byte advertisement).
 - ✅ `{"t":"call","cmd":"incoming|outgoing|accept|start|end|reject|ignore","name":…,"number":…}` —
   full-screen call screen (ring on `incoming`, In-call on `accept`/`start`, clear on `end`/`reject`/`ignore`).
 - ✅ `{"t":"musicinfo","artist":…,"album":…,"track":…,"dur":<ms>,"c":<count>,"n":<nr>}` — now-playing metadata.
-- ✅ `{"t":"musicstate","state":"play|pause|stop|","position":…,"shuffle":…,"repeat":…}` — transport (empty/`stop` clears).
+- ✅ `{"t":"musicstate","state":"play|pause|stop|","position":…,"shuffle":…,"repeat":…}` — transport
+  (`stop` clears; empty means unknown and preserves the last state).
 - ✅ `{"t":"canned_responses_sync","d":[{"text":…,"disp":…?}]}` — synced quick-reply choices.
 - later: `{"t":"alarm",…}`, `{"t":"weather",…}`
 

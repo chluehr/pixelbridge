@@ -1,0 +1,37 @@
+[
+  {
+    "name": "music_note",
+    "download": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/src/image/music_note/materialicons/24px.svg",
+    "sha256": "02c754494d22c3b102fdb58e376221420001a55b7d231c99b590558621468058"
+  },
+  {
+    "name": "play_arrow",
+    "download": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/src/av/play_arrow/materialicons/24px.svg",
+    "sha256": "39d601c1d4199c5cadddf5f96a1f57157147d1eedc7a147cdadc29805c6d5fea"
+  },
+  {
+    "name": "pause",
+    "download": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/src/av/pause/materialicons/24px.svg",
+    "sha256": "e761b758c1062e3aed85186ded662bf63dc7ee7f2e495d5feddc5041fe9ccd73"
+  },
+  {
+    "name": "skip_next",
+    "download": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/src/av/skip_next/materialicons/24px.svg",
+    "sha256": "c4246c4e52522d93e5755a046b579f6aa29ca2968e4a36d9583802701ddc5665"
+  },
+  {
+    "name": "skip_previous",
+    "download": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/src/av/skip_previous/materialicons/24px.svg",
+    "sha256": "76c11108a85e987b724c7e197c0be4df84ca184bdddd644c1835ddfa99d3b9de"
+  },
+  {
+    "name": "volume_up",
+    "download": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/src/av/volume_up/materialicons/24px.svg",
+    "sha256": "0042b73f6a3a8ea2f61fdf0b54c0d4e9281b3c20a18fd94aa5bcd54b16fd7f88"
+  },
+  {
+    "name": "volume_down",
+    "download": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/src/av/volume_down/materialicons/24px.svg",
+    "sha256": "c4fc7485c188804148bd94b0ea1b0a09e7d5c68ed6a540fe01b2499d69e32f3c"
+  }
+]

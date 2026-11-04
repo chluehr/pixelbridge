@@ -51,6 +51,29 @@ distributed in this repository.** PixelBridge only communicates with Gadgetbridg
 Bangle.js JSON-over-Nordic-UART wire protocol, so it is a separate, independent work and carries no
 AGPL obligation. See [`docs/licensing.md`](docs/licensing.md).
 
+## Bundled app icons
+
+- Music controls and the watch-face indicator use **Google Material Icons**, licensed under
+  **Apache-2.0**. Original SVGs, the license and exact source/checksum records are in
+  [`docs/music-icons/`](docs/music-icons/SOURCES.json). Android vectors preserve the original paths.
+
+- Full-color app icons are downloaded from the respective apps' Google Play and RuStore listings.
+  Original images, source URLs and SHA-256 checksums are in
+  [`docs/app-icons/color/`](docs/app-icons/color/SOURCES.json). The bundled 128×128 PNG copies retain
+  the original colors and apply a circular transparency mask, as shown in
+  [`docs/app-icons/round/`](docs/app-icons/round/). These images and trademarks belong to their
+  respective owners and are used solely to identify notification sources; they are not covered by
+  PixelBridge's Apache-2.0 license or Simple Icons' CC0 license.
+- Separate small notification masks use 42 logos from
+  **[Simple Icons 14.15.0](https://github.com/simple-icons/simple-icons/tree/14.15.0)**,
+  commit `5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e`. Original SVG files, the collection's
+  **CC0-1.0** license and disclaimer are in [`docs/app-icons/notification-masks/`](docs/app-icons/notification-masks/).
+  [`SOURCES.json`](docs/app-icons/notification-masks/SOURCES.json) preserves each icon's upstream source, guidelines,
+  any icon-specific license metadata and download checksum. Android VectorDrawable versions preserve
+  the original path geometry and use opaque white for notification alpha masks. The ChatGPT small icon
+  uses the OpenAI logo. Logos and trademarks remain the property of their respective owners; inclusion
+  identifies the notification source and does not imply affiliation or endorsement.
+
 ## Trademarks
 
 - **"Bangle.js"** is a trademark of **Espruino / Pur3 Ltd**. PixelBridge is not affiliated with or

@@ -6,6 +6,7 @@ import android.app.RemoteInput
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.background
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -13,8 +14,10 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -27,6 +30,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
@@ -46,6 +51,7 @@ import net.farcaster.pixelbridge.data.NotificationActions
 import net.farcaster.pixelbridge.data.NotificationStore
 import net.farcaster.pixelbridge.data.NowPlaying
 import net.farcaster.pixelbridge.data.WatchNotification
+import net.farcaster.pixelbridge.notify.AppIcons
 
 private const val KEY_REPLY = "pb_reply"
 
@@ -62,6 +68,7 @@ private val BannerBg = Color(0xFF2A2B2E)
 /** Notification list with per-card Dismiss / Reply actions (watch -> phone back-channel). */
 @Composable
 fun NotificationsScreen() {
+    val context = LocalContext.current
     val notifications by NotificationStore.items.collectAsStateWithLifecycle()
     val status by ProbeStateHolder.state.collectAsStateWithLifecycle()
     val nowPlaying by MusicStore.state.collectAsStateWithLifecycle()
@@ -109,15 +116,16 @@ fun NotificationsScreen() {
             nowPlaying?.let { np ->
                 MusicCard(
                     np = np,
-                    onPrev = { NotificationActions.music(NotificationActions.MUSIC_PREVIOUS) },
+                    controlsEnabled = status.controlsReady,
+                    onPrev = { sendMusicCommand(context, NotificationActions.MUSIC_PREVIOUS) },
                     onPlayPause = {
-                        NotificationActions.music(
+                        sendMusicCommand(context,
                             if (np.playing) NotificationActions.MUSIC_PAUSE else NotificationActions.MUSIC_PLAY,
                         )
                     },
-                    onNext = { NotificationActions.music(NotificationActions.MUSIC_NEXT) },
-                    onVolDown = { NotificationActions.music(NotificationActions.MUSIC_VOLUMEDOWN) },
-                    onVolUp = { NotificationActions.music(NotificationActions.MUSIC_VOLUMEUP) },
+                    onNext = { sendMusicCommand(context, NotificationActions.MUSIC_NEXT) },
+                    onVolDown = { sendMusicCommand(context, NotificationActions.MUSIC_VOLUMEDOWN) },
+                    onVolUp = { sendMusicCommand(context, NotificationActions.MUSIC_VOLUMEUP) },
                 )
             }
             if (notifications.isEmpty()) {
@@ -202,6 +210,7 @@ private fun StatusHeader(s: ProbeReport) {
 @Composable
 private fun MusicCard(
     np: NowPlaying,
+    controlsEnabled: Boolean,
     onPrev: () -> Unit,
     onPlayPause: () -> Unit,
     onNext: () -> Unit,
@@ -245,9 +254,9 @@ private fun MusicCard(
                 .padding(top = 6.dp),
             horizontalArrangement = Arrangement.spacedBy(6.dp),
         ) {
-            ActionChip("⏮", onPrev, Modifier.weight(1f))
-            ActionChip(if (np.playing) "⏸" else "▶", onPlayPause, Modifier.weight(1f))
-            ActionChip("⏭", onNext, Modifier.weight(1f))
+            ActionChip("⏮", onPrev, Modifier.weight(1f), enabled = controlsEnabled)
+            ActionChip(if (np.playing) "⏸" else "▶", onPlayPause, Modifier.weight(1f), enabled = controlsEnabled)
+            ActionChip("⏭", onNext, Modifier.weight(1f), enabled = controlsEnabled)
         }
         Row(
             modifier = Modifier
@@ -255,8 +264,8 @@ private fun MusicCard(
                 .padding(top = 8.dp),
             horizontalArrangement = Arrangement.spacedBy(6.dp),
         ) {
-            ActionChip("🔉", onVolDown, Modifier.weight(1f))
-            ActionChip("🔊", onVolUp, Modifier.weight(1f))
+            ActionChip("🔉", onVolDown, Modifier.weight(1f), enabled = controlsEnabled)
+            ActionChip("🔊", onVolUp, Modifier.weight(1f), enabled = controlsEnabled)
         }
     }
 }
@@ -275,13 +284,23 @@ private fun NotificationCard(
             .padding(horizontal = 14.dp, vertical = 10.dp),
         verticalArrangement = Arrangement.spacedBy(2.dp),
     ) {
-        n.app?.let {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(6.dp),
+        ) {
+            Image(
+                painter = painterResource(AppIcons.colorForSource(n.app)),
+                contentDescription = null, // The adjacent app label describes the logo.
+                modifier = Modifier.size(24.dp).clip(CircleShape),
+            )
             Text(
-                text = it.uppercase(),
+                text = (n.app ?: "Notification").uppercase(),
                 style = MaterialTheme.typography.labelSmall,
                 color = AppAccent,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
+                modifier = Modifier.weight(1f),
             )
         }
         Text(
@@ -314,16 +333,16 @@ private fun NotificationCard(
 }
 
 @Composable
-private fun ActionChip(label: String, onClick: () -> Unit, modifier: Modifier = Modifier) {
+private fun ActionChip(label: String, onClick: () -> Unit, modifier: Modifier = Modifier, enabled: Boolean = true) {
     Text(
         text = label,
         style = MaterialTheme.typography.labelMedium,
-        color = TitleColor,
+        color = if (enabled) TitleColor else Muted,
         textAlign = TextAlign.Center,
         modifier = modifier
             .clip(RoundedCornerShape(14.dp))
             .background(ChipBg)
-            .clickable(onClick = onClick)
+            .clickable(enabled = enabled, onClick = onClick)
             .padding(horizontal = 12.dp, vertical = 8.dp),
     )
 }

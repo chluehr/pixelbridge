@@ -4,6 +4,8 @@ package net.farcaster.pixelbridge.data
 
 import org.junit.After
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
+import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Test
 
@@ -23,7 +25,7 @@ class NotificationActionsTest {
         NotificationActions.handler = { id, action, reply -> captured = Triple(id, action, reply) }
         NotificationActions.findPhoneHandler = { active -> findActive = active }
         NotificationActions.callHandler = { action -> callAction = action }
-        NotificationActions.musicHandler = { cmd -> musicCmd = cmd }
+        NotificationActions.musicHandler = { cmd -> musicCmd = cmd; true }
     }
 
     @After fun teardown() {
@@ -65,7 +67,15 @@ class NotificationActionsTest {
 
     @Test
     fun musicForwardsCommand() {
-        NotificationActions.music(NotificationActions.MUSIC_NEXT)
+        assertTrue(NotificationActions.music(NotificationActions.MUSIC_NEXT))
         assertEquals("next", musicCmd)
+    }
+
+    @Test
+    fun musicReportsMissingOrRejectedTransport() {
+        NotificationActions.musicHandler = null
+        assertFalse(NotificationActions.music(NotificationActions.MUSIC_PAUSE))
+        NotificationActions.musicHandler = { false }
+        assertFalse(NotificationActions.music(NotificationActions.MUSIC_NEXT))
     }
 }

@@ -10,6 +10,8 @@ import org.json.JSONArray
 import org.json.JSONObject
 import net.farcaster.pixelbridge.notify.NotificationRouter
 import net.farcaster.pixelbridge.notify.WatchNotifier
+import net.farcaster.pixelbridge.data.NotificationActions
+import net.farcaster.pixelbridge.ui.MusicActivity
 
 /**
  * DEBUG-ONLY: injects a simulated notification straight into the real pipeline
@@ -28,6 +30,18 @@ import net.farcaster.pixelbridge.notify.WatchNotifier
  */
 class DebugInjectReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
+        if (intent.getBooleanExtra("openMusic", false)) {
+            context.startActivity(Intent(context, MusicActivity::class.java).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
+            return
+        }
+        intent.getStringExtra("music")?.let { command ->
+            if (command in setOf("play", "pause", "next", "previous", "volumeup", "volumedown")) {
+                val sent = NotificationActions.music(command)
+                Log.i(TAG, "music command $command queued=$sent")
+                resultData = "queued=$sent"
+            }
+            return
+        }
         val line = when {
             intent.getStringExtra("line") != null -> intent.getStringExtra("line")!!
             intent.hasExtra("del") -> JSONObject().apply {

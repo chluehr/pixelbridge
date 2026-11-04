@@ -22,14 +22,15 @@ object NotificationActions {
 
     /** (cmd) -> control phone music playback. Installed by the service. */
     @Volatile
-    var musicHandler: ((cmd: String) -> Unit)? = null
+    var musicHandler: ((cmd: String) -> Boolean)? = null
 
     fun dismiss(id: Long) = handler?.invoke(id, ACTION_DISMISS, null)
     fun reply(id: Long, text: String) = handler?.invoke(id, ACTION_REPLY, text)
     fun dismissAll(id: Long = 0L) = handler?.invoke(id, ACTION_DISMISS_ALL, null)
     fun findPhone(active: Boolean = true) = findPhoneHandler?.invoke(active)
     fun call(action: String) = callHandler?.invoke(action)
-    fun music(cmd: String) = musicHandler?.invoke(cmd)
+    /** True means queued for BLE transmission, not acknowledged by the phone's player. */
+    fun music(cmd: String): Boolean = musicHandler?.invoke(cmd) ?: false
 
     const val ACTION_DISMISS = "DISMISS"
     const val ACTION_REPLY = "REPLY"

@@ -27,6 +27,11 @@ data class ProbeReport(
     /** True once we can advertise AND a central actually connects to our GATT server. */
     val peripheralReady: Boolean
         get() = advertiserAvailable && advertising && gattServerOpen && centralConnected
+
+    val controlsReady: Boolean
+        // A restored Samsung connection may not replay the CCCD callback. Explicit user commands
+        // must still be attempted; the TX queue checks real submission/completion results.
+        get() = centralConnected
 }
 
 /**

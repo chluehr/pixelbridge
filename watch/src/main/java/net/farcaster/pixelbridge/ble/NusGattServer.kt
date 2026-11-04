@@ -12,8 +12,11 @@ import android.bluetooth.BluetoothGattServerCallback
 import android.bluetooth.BluetoothGattService
 import android.bluetooth.BluetoothManager
 import android.bluetooth.BluetoothProfile
+import android.bluetooth.BluetoothStatusCodes
 import android.content.Context
 import android.os.Build
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import java.io.ByteArrayOutputStream
 
@@ -38,17 +41,22 @@ class NusGattServer(
     private val manager = context.getSystemService(Context.BLUETOOTH_SERVICE) as BluetoothManager
     private var server: BluetoothGattServer? = null
     private var txChar: BluetoothGattCharacteristic? = null
+    @Volatile
     private var connected: BluetoothDevice? = null
     // Written on the GATT binder thread (CCCD write); read cross-thread from the battery receiver /
     // findPhone path via isNotifyEnabled, so it must be @Volatile for visibility.
     @Volatile
     private var notifyEnabled = false
+    @Volatile
     private var mtu = DEFAULT_MTU
     private val rxBuffer = ByteArrayOutputStream()
 
-    private val txLock = Any()
-    private val txQueue = ArrayDeque<ByteArray>()
-    private var txBusy = false
+    private val handler = Handler(Looper.getMainLooper())
+    private val txTimeout = Runnable {
+        Log.e(TAG, "TX callback timed out; reconnecting")
+        txQueue.onPacketSent(false)
+    }
+    private val txQueue = NusTxQueue(::sendChunk, ::onTxFailure)
 
     val connectedDevice: BluetoothDevice? get() = connected
     val isNotifyEnabled: Boolean get() = notifyEnabled
@@ -88,7 +96,8 @@ class NusGattServer(
         server = null
         connected = null
         notifyEnabled = false
-        synchronized(txLock) { txQueue.clear(); txBusy = false }
+        handler.removeCallbacks(txTimeout)
+        txQueue.reset()
     }
 
     /**
@@ -96,45 +105,44 @@ class NusGattServer(
      * TX notify characteristic. Returns true if a central is connected and the line was queued.
      */
     fun sendLine(line: String): Boolean {
-        val device = connected ?: run { Log.w(TAG, "sendLine: no central connected"); return false }
-        // Terminate with CRLF, not LF: Gadgetbridge's line splitter does substring(0, p-1) on the
-        // '\n' index, assuming a trailing '\r' — with only '\n' it would eat our closing brace.
-        val payload = (line + "\r\n").toByteArray(Charsets.UTF_8)
+        if (connected == null) {
+            Log.w(TAG, "sendLine: no phone connected")
+            return false
+        }
         val chunkSize = (mtu - 3).coerceAtLeast(MIN_CHUNK)
-        synchronized(txLock) {
-            var i = 0
-            while (i < payload.size) {
-                val end = minOf(i + chunkSize, payload.size)
-                txQueue.add(payload.copyOfRange(i, end))
-                i = end
-            }
-        }
-        Log.i(TAG, "sendLine queued ${payload.size}B (mtu=$mtu chunk=$chunkSize) notifySubscribed=$notifyEnabled")
-        pumpTx(device)
-        return true
+        val queued = txQueue.enqueue(line, chunkSize)
+        Log.i(TAG, "sendLine queued=$queued (mtu=$mtu chunk=$chunkSize)")
+        return queued
     }
 
-    private fun pumpTx(device: BluetoothDevice) {
-        val chunk: ByteArray
-        synchronized(txLock) {
-            if (txBusy) return
-            chunk = txQueue.removeFirstOrNull() ?: return
-            txBusy = true
-        }
-        sendChunk(device, chunk)
+    private fun sendChunk(chunk: ByteArray): Boolean {
+        val device = connected ?: return false
+        val gattServer = server ?: return false
+        val characteristic = txChar ?: return false
+        val accepted = runCatching {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                val status = gattServer.notifyCharacteristicChanged(device, characteristic, false, chunk)
+                if (status != BluetoothStatusCodes.SUCCESS) Log.e(TAG, "TX rejected: status=$status")
+                status == BluetoothStatusCodes.SUCCESS
+            } else {
+                @Suppress("DEPRECATION")
+                run {
+                    characteristic.value = chunk
+                    gattServer.notifyCharacteristicChanged(device, characteristic, false)
+                }
+            }
+        }.getOrElse { Log.e(TAG, "TX failed", it); false }
+        if (accepted) handler.postDelayed(txTimeout, TX_TIMEOUT_MS)
+        return accepted
     }
 
-    private fun sendChunk(device: BluetoothDevice, chunk: ByteArray) {
-        val gattServer = server ?: return
-        val characteristic = txChar ?: return
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            gattServer.notifyCharacteristicChanged(device, characteristic, false, chunk)
-        } else {
-            @Suppress("DEPRECATION")
-            run {
-                characteristic.value = chunk
-                gattServer.notifyCharacteristicChanged(device, characteristic, false)
-            }
+    private fun onTxFailure() {
+        handler.removeCallbacks(txTimeout)
+        notifyEnabled = false
+        onStateChange()
+        connected?.let { device ->
+            Log.e(TAG, "TX failed; resetting BLE connection")
+            runCatching { server?.cancelConnection(device) }
         }
     }
 
@@ -146,12 +154,15 @@ class NusGattServer(
                     Log.i(TAG, "central connected: ${device.address}")
                 }
                 BluetoothProfile.STATE_DISCONNECTED -> {
-                    connected = null
-                    notifyEnabled = false
-                    mtu = DEFAULT_MTU
-                    rxBuffer.reset()
-                    synchronized(txLock) { txQueue.clear(); txBusy = false }
-                    Log.i(TAG, "central disconnected")
+                    if (connected == device) {
+                        connected = null
+                        notifyEnabled = false
+                        mtu = DEFAULT_MTU
+                        rxBuffer.reset()
+                        handler.removeCallbacks(txTimeout)
+                        txQueue.reset()
+                        Log.i(TAG, "central disconnected")
+                    }
                 }
             }
             onStateChange()
@@ -163,8 +174,16 @@ class NusGattServer(
         }
 
         override fun onNotificationSent(device: BluetoothDevice, status: Int) {
-            synchronized(txLock) { txBusy = false }
-            pumpTx(device)
+            if (device != connected) return
+            handler.removeCallbacks(txTimeout)
+            Log.i(TAG, "TX packet completed: status=$status")
+            if (status == BluetoothGatt.GATT_SUCCESS && !notifyEnabled) {
+                // Samsung can restore the physical link/subscription without replaying a CCCD
+                // write to this GATT-server instance. Successful TX refreshes our advisory flag.
+                notifyEnabled = true
+                onStateChange()
+            }
+            txQueue.onPacketSent(status == BluetoothGatt.GATT_SUCCESS)
         }
 
         override fun onCharacteristicWriteRequest(
@@ -213,6 +232,10 @@ class NusGattServer(
                 val was = notifyEnabled
                 notifyEnabled = value.isNotEmpty() && value[0].toInt() != 0
                 justSubscribed = !was && notifyEnabled
+                if (justSubscribed) {
+                    handler.removeCallbacks(txTimeout)
+                    txQueue.reset()
+                }
                 Log.i(TAG, "CCCD write from ${device.address}: notifySubscribed=$notifyEnabled")
                 onStateChange()
             }
@@ -227,5 +250,6 @@ class NusGattServer(
         const val TAG = "NusGattServer"
         const val DEFAULT_MTU = 23
         const val MIN_CHUNK = 20
+        const val TX_TIMEOUT_MS = 5_000L
     }
 }

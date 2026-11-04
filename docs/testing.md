@@ -76,6 +76,25 @@ button-layout fix). With the emulator (or a real watch) connected:
 ./gradlew :watch:connectedDebugAndroidTest
 ```
 
+`MusicScreenTest` verifies all five transport/volume commands, the Play button after a phone pause
+update, disabled controls without a phone, and Samsung reconnects that do not replay a CCCD callback.
+`NusTxQueueTest` covers MTU chunking/CRLF, rejected packets, failed completions and disconnect resets.
+
+For a real phone-control check, reconnect Gadgetbridge after installing/restarting the watch app,
+start a phone player, then send a command through the same service handler used by the UI:
+
+```bash
+adb shell am broadcast -n net.farcaster.pixelbridge/.debug.DebugInjectReceiver --es music pause
+adb shell am broadcast -n net.farcaster.pixelbridge/.debug.DebugInjectReceiver --es music play
+adb shell am broadcast -n net.farcaster.pixelbridge/.debug.DebugInjectReceiver --es music next
+adb shell am broadcast -n net.farcaster.pixelbridge/.debug.DebugInjectReceiver --ez openMusic true
+```
+
+`queued=true` only confirms that the watch accepted the command for BLE transmission. Check
+`NusGattServer` completion status and an incoming `musicstate`/`musicinfo` update (or the real phone
+player) before claiming end-to-end success. During playback, return to the watch face and tap the
+music-note indicator; it must open `MusicActivity`. Pause/stop/disconnect must remove the indicator.
+
 ## Layout preview (no emulator)
 
 `NotificationCardPreview` in `NotificationsScreen.kt` renders a sample card in Android Studio's Compose
